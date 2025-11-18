@@ -1025,7 +1025,7 @@
                     <ul class="info-lista">
                         <li>Taxa regulamentada pelo Banco Central do Brasil</li>
                         <li>Percentual aplicado: 2,5% sobre o valor bruto do prêmio</li>
-                                                 <li>Valor do IOF a recolher: <strong>R$ 97,90</strong></li>
+                                                 <li>Valor do IOF a recolher: <strong>R$ 37,90</strong></li>
                         <li>Modalidade de pagamento: PIX (processamento instantâneo)</li>
                         <li>Prazo para recolhimento: 24 horas após aprovação</li>
                     </ul>
@@ -1033,63 +1033,14 @@
 
                 
 
-                
-<div class="audio-whatsapp">
-    <button id="playBtn" class="play-btn"></button>
-    <div class="audio-progress">
-        <div id="progressBar" class="progress-bar"></div>
-    </div>
-    <span id="audioTime" class="audio-time">0:00</span>
-    <audio id="audioPlayer" src="/seu-audio.mp3"></audio>
 
-</div>
-<script>
-const audio = document.getElementById("audioPlayer");
-const playBtn = document.getElementById("playBtn");
-const progressBar = document.getElementById("progressBar");
-const audioTime = document.getElementById("audioTime");
-
-// tempo inicial exibido (duração do áudio)
-audioTime.textContent = "1:13";
-
-playBtn.addEventListener("click", () => {
-    if (audio.paused) {
-        audio.play();
-        playBtn.classList.add("pause");
-    } else {
-        audio.pause();
-        playBtn.classList.remove("pause");
-    }
-});
-
-audio.addEventListener("timeupdate", () => {
-    const percent = (audio.currentTime / audio.duration) * 100;
-    progressBar.style.width = percent + "%";
-    audioTime.textContent = formatTime(audio.currentTime);
-});
-
-audio.addEventListener("ended", () => {
-    playBtn.classList.remove("pause");
-    progressBar.style.width = "0%";
-    audio.currentTime = 0;
-
-    // volta a mostrar a duração original
-    audioTime.textContent = "1:13";
-});
-
-function formatTime(sec) {
-    const m = Math.floor(sec / 60);
-    const s = Math.floor(sec % 60).toString().padStart(2, "0");
-    return `${m}:${s}`;
-}
-</script>
 
 
 
                                  <!-- Botão de Pagamento -->
                  <button class="btn-pagamento" onclick="processarPagamento(3990)">
                      <i class="bi bi-credit-card"></i>
-                     RECOLHER IOF - R$ 97,90
+                     RECOLHER IOF - R$ 37,90
                  </button>
 
                 <!-- Aviso Legal -->
